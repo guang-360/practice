@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D882442255914DA0062A246 /* functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D882441255914DA0062A246 /* functions.c */; };
+		1DB66F2C256E9F3600CF6BE9 /* pointer.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DB66F2B256E9F3600CF6BE9 /* pointer.c */; };
 		1DBCA5F525514C4000649BA0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1DBCA5F425514C4000649BA0 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,8 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D882441255914DA0062A246 /* functions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = functions.c; sourceTree = "<group>"; };
+		1DB66F2A256E9F3600CF6BE9 /* pointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pointer.h; sourceTree = "<group>"; };
+		1DB66F2B256E9F3600CF6BE9 /* pointer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pointer.c; sourceTree = "<group>"; };
 		1DBCA5F125514C4000649BA0 /* program design */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "program design"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBCA5F425514C4000649BA0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		1DBCA5FC25514C6900649BA0 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,8 @@
 		1DBCA5E825514C4000649BA0 = {
 			isa = PBXGroup;
 			children = (
+				1DB66F2A256E9F3600CF6BE9 /* pointer.h */,
+				1DB66F2B256E9F3600CF6BE9 /* pointer.c */,
 				1DBCA5F325514C4000649BA0 /* program design */,
 				1DBCA5F225514C4000649BA0 /* Products */,
 			);
@@ -58,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				1DBCA5F425514C4000649BA0 /* main.c */,
+				1D882441255914DA0062A246 /* functions.c */,
+				1DBCA5FC25514C6900649BA0 /* Header.h */,
 			);
 			path = "program design";
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DBCA5F525514C4000649BA0 /* main.c in Sources */,
+				1D882442255914DA0062A246 /* functions.c in Sources */,
+				1DB66F2C256E9F3600CF6BE9 /* pointer.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
