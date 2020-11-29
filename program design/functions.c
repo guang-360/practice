@@ -390,36 +390,67 @@ void SCHEDULE(void)
 
 
 
+/*
+ 请编写一 C语言函数get_weekday，该函数用于计算某一天是星期几。函数接收三个整型参数，
+ 分别表示年(year)、月(month)与日(day);并返回一个整数表示星期几，用 0、1-6 分 别表示星期日、星期一到星期六。
+ 说明:已知公元元年(即 1 年)1 月 1 日是星期一。为了简化问题，只考虑公元后的日期， 即年大于等于 1.
+ */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//    rename函数测试
-void rename_test(void)
+int get_weekday(int year, int month, int day)
 {
-
-        int ret;
-        char old[] = "/Users/duoguangxu/Documents/reminder.txt";
-        char new[] = "/Users/duoguangxu/Documents/reminder_2.txt";
-        ret = rename(old, new);
-        if(ret == 0)
-        {
-            printf("change successfully!\n");
-        }
-        else
-        {
-            printf("Can't rename!\n");
-        }
+    if(month < 1 || month > 12 || day < 0 || day > 31)
+    {
+        perror("wrong input!");
+        return 0;
+    }
+    
+    int is_leapyear(int year);      //判断闰年
+    int judge_month(int month, int n);  //用来判断当年过完了几个月，在当前月之前的返回1，否则返回0
+    int weekday = 0;
+    int yearday = ((year - 1)/4) * (365 * 4 + 1) + ((year - 1) % 4) * 365 - ((year - 1) / 100 - (year - 1) / 400);      //这里复杂一点，计算当前年之前已经过完所有年的天数
+    int monthday = 31 * (judge_month(month, 1) + judge_month(month, 3) + judge_month(month, 5) + judge_month(month, 7) + judge_month(month, 8) + judge_month(month, 10) + judge_month(month, 12)) + 28 * judge_month(month, 2) + 30 *( judge_month(month, 4) + judge_month(month, 6) + judge_month(month, 9) + judge_month(month, 11)  );
+    if(is_leapyear(year))       //闰年2月再加一天
+    {
+        monthday += 1;
+    }
+    printf("yearday = %d\nmonthday = %d\n",yearday,monthday);
+    int total = yearday + monthday + day;
+    weekday = total % 7;
+    
+    return weekday;
+    
 }
+
+int judge_month(int month, int n)   //判断month是否大于n
+{
+    if(month > n)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+int is_leapyear(int year)
+{
+    if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+

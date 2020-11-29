@@ -64,6 +64,15 @@ void SCHEDULE(void);
 
 
 
+/*
+ 请编写一 C语言函数get_weekday，该函数用于计算某一天是星期几。函数接收三个整型参数，
+ 分别表示年(year)、月(month)与日(day);并返回一个整数表示星期几，用 0、1-6 分 别表示星期日、星期一到星期六。
+ 说明:已知公元元年(即 1 年)1 月 1 日是星期一。为了简化问题，只考虑公元后的日期， 即年大于等于 1.
+ */
+
+int get_weekday(int year, int month, int day);
+
+
 #endif /* Header_h */
 
 

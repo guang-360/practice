@@ -30,9 +30,11 @@ int main()
 //    SCHEDULE();
     
     
+    //19年七
+    int weekday = 0;
+    weekday = get_weekday(1999, 9, 16);
     
-    
-    
+    printf("weekday = %d\n",weekday);
     
     
     
@@ -40,7 +42,7 @@ int main()
     
     
     
-    ex_9();
+//    ex_9();
 
     
 
