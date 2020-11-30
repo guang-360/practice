@@ -73,6 +73,11 @@ void SCHEDULE(void);
 int get_weekday(int year, int month, int day);
 
 
+
+//19.8
+void ANAGRAM(void);
+
+
 #endif /* Header_h */
 
 

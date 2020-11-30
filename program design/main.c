@@ -31,20 +31,29 @@ int main()
     
     
     //19年七
-    int weekday = 0;
-    weekday = get_weekday(2020, 11, 29);
+//    int weekday = 0;
+//    weekday = get_weekday(2020, 0, 1);
+//
+//    printf("weekday = %d\n",weekday);
+//
+//
+//
     
-    printf("weekday = %d\n",weekday);
+    //19 八
+    //创建了一个含有变位词的文件
+//    FILE *fp = fopen("/Users/duoguangxu/Documents/19test.txt", "w+");
+//    fprintf(fp, "silent listen beautiful integral suck TRiangle");
+//    fclose(fp);
     
     
     
-/*******************pointer.c*********************/
     
     
+    /*******************pointer.c*********************/
     
 //    ex_9();
 
-    
+    ANAGRAM();
 
     return 0;
 }
