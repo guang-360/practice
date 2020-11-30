@@ -411,7 +411,7 @@ int get_weekday(int year, int month, int day)
     int monthday = 31 * (judge_month(month, 1) + judge_month(month, 3) + judge_month(month, 5) + judge_month(month, 7) + judge_month(month, 8) + judge_month(month, 10) + judge_month(month, 12)) + 28 * judge_month(month, 2) + 30 *( judge_month(month, 4) + judge_month(month, 6) + judge_month(month, 9) + judge_month(month, 11)  );
     if(is_leapyear(year))       //闰年2月再加一天
     {
-        monthday += 1;
+        monthday += judge_month(month, 2);
     }
     printf("yearday = %d\nmonthday = %d\n",yearday,monthday);
     int total = yearday + monthday + day;

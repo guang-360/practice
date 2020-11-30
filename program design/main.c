@@ -32,7 +32,7 @@ int main()
     
     //19年七
     int weekday = 0;
-    weekday = get_weekday(1999, 9, 16);
+    weekday = get_weekday(2020, 11, 29);
     
     printf("weekday = %d\n",weekday);
     
